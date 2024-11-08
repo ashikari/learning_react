@@ -3,7 +3,7 @@
 ## Milestone 1: Project Setup
 
 1. **Install Node.js and create a React app**
-   - Use `npm create vite@latest img-transform --template react-ts` to scaffold your project.
+   - Use `npm create vite@latest personal-website --template react-ts` to scaffold your project.
    - Verify your setup by running the app with the command `npm run dev`.
 
 ---
