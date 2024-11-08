@@ -1,24 +1,116 @@
-# Learning React
+Last login: Thu Nov  7 22:26:28 on ttys004
+abbas ~/repos % cd learning_react
+abbas ~/repos/learning_react % ls
+README.md     img-transform
+abbas ~/repos/learning_react % cd img-transform
+abbas ~/repos/learning_react/img-transform % ls
+README.md          node_modules       public             tsconfig.json
+eslint.config.js   package-lock.json  src                tsconfig.node.json
+index.html         package.json       tsconfig.app.json  vite.config.ts
+abbas ~/repos/learning_react/img-transform % cd src
+abbas ~/repos/learning_react/img-transform/src % ls
+App.css       assets        main.tsx
+App.tsx       index.css     vite-env.d.ts
+abbas ~/repos/learning_react/img-transform/src % cd .
+abbas ~/repos/learning_react/img-transform/src % cd ..
+abbas ~/repos/learning_react/img-transform % ls
+README.md          node_modules       public             tsconfig.json
+eslint.config.js   package-lock.json  src                tsconfig.node.json
+index.html         package.json       tsconfig.app.json  vite.config.ts
+abbas ~/repos/learning_react/img-transform % vim README.md
+abbas ~/repos/learning_react/img-transform % ls
+README.md          node_modules       public             tsconfig.json
+eslint.config.js   package-lock.json  src                tsconfig.node.json
+index.html         package.json       tsconfig.app.json  vite.config.ts
+abbas ~/repos/learning_react/img-transform % vim package.json
+abbas ~/repos/learning_react/img-transform % npm run lint
 
+> img-transform@0.0.0 lint
+> eslint .
+
+abbas ~/repos/learning_react/img-transform % ls
+README.md          node_modules       public             tsconfig.json
+eslint.config.js   package-lock.json  src                tsconfig.node.json
+index.html         package.json       tsconfig.app.json  vite.config.ts
+abbas ~/repos/learning_react/img-transform % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+abbas ~/repos/learning_react/img-transform % git diff
+diff --git a/img-transform/README.md b/img-transform/README.md
+index 74872fd..4919bd4 100644
+--- a/img-transform/README.md
++++ b/img-transform/README.md
+@@ -1,5 +1,11 @@
+ # React + TypeScript + Vite
+
++---
++## Instructions to Start the Project:
++ - 'npm run dev'
++ -
++---
++
+ This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+
+ Currently, two official plugins are available:
+abbas ~/repos/learning_react/img-transform % vim package.json
+abbas ~/repos/learning_react/img-transform % npm run lint
+
+> img-transform@0.0.0 lint
+> eslint . --fix
+
+abbas ~/repos/learning_react/img-transform % ls
+README.md          node_modules       public             tsconfig.json
+eslint.config.js   package-lock.json  src                tsconfig.node.json
+index.html         package.json       tsconfig.app.json  vite.config.ts
+abbas ~/repos/learning_react/img-transform % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  2
+  3 ## Milestone 1: Project Setup
+  4
+  5 1. **Install Node.js and create a React app**
+  6    - Use `npm create vite@latest img-transform --tempalte react-ts` to scaff    old your project.
+  7    - Verify your setup by running the app and confirming it works. The comma
+    nd for this is `npm run dev`.
+  8
+  9 ---
+ 10
+ 11 ## Milestone 2: Building the Homepage Layout
+ 12
+ 13 1. **Create the Homepage component**
+ 14    - Add a `HomePage` component in `components/HomePage.js`.
+ 15    - Structure a basic page layout (header, main, footer) using semantic HTM    L elements.
+ 16
+ 17 2. **Add CSS styling**
+ 18    - Add minimal styling to see changes visually.
+ 19    - **Commit**: "Create and style basic homepage layout."
+ NORMAL  ᚠ main!  <+]   mar…  utf-8[unix]  534W 12% ㏑:14/113☰℅::1  ☲ [517]tra
+ README.md+                                                                                                                                                                                                                                  buffers
 ## Milestone 1: Project Setup
 
-1. **Install Node.js and create a React app**  
-   - Use `npx create-react-app my-website` to scaffold your project.
-   - Verify your setup by running the app and confirming it works.
-
-2. **Set up project structure**  
-   - Organize folders (`src`, `components`, `styles`).
-   - **Commit**: "Set up project structure and verify initial React app."
+1. **Install Node.js and create a React app**
+   - Use `npm create vite@latest img-transform --tempalte react-ts` to scaffold your project.
+   - Verify your setup by running the app and confirming it works. The command for this is `npm run dev`.
 
 ---
 
 ## Milestone 2: Building the Homepage Layout
 
-1. **Create the Homepage component**  
+1. **Create the Homepage component**
    - Add a `HomePage` component in `components/HomePage.js`.
    - Structure a basic page layout (header, main, footer) using semantic HTML elements.
 
-2. **Add CSS styling**  
+2. **Add CSS styling**
    - Add minimal styling to see changes visually.
    - **Commit**: "Create and style basic homepage layout."
 
@@ -26,10 +118,10 @@
 
 ## Milestone 3: Adding a Navbar
 
-1. **Create a Navbar component**  
+1. **Create a Navbar component**
    - Add `components/Navbar.js` and structure a simple navbar (e.g., links to "Home", "About Me", and "Projects").
 
-2. **Style the Navbar**  
+2. **Style the Navbar**
    - Make it fixed or sticky at the top and style for a clean look.
    - **Commit**: "Add Navbar component and style for a clean, fixed position."
 
@@ -37,10 +129,10 @@
 
 ## Milestone 4: Adding About Me Section
 
-1. **Create an About component**  
+1. **Create an About component**
    - Structure `About.js` with information about yourself (bio, profile picture placeholder, etc.).
 
-2. **Add routing**  
+2. **Add routing**
    - Use `react-router-dom` to navigate between Home, About, and other sections.
    - **Commit**: "Add About Me section with basic routing."
 
@@ -48,70 +140,15 @@
 
 ## Milestone 5: Adding Project Cards
 
-1. **Create Project component**  
+1. **Create Project component**
    - Create `components/Project.js` to hold information for each project.
 
-2. **Create Projects section**  
+2. **Create Projects section**
    - Use `Projects.js` to hold multiple Project components and showcase your work.
    - **Commit**: "Add Projects section with individual project cards."
 
 ---
-
-## Milestone 6: Working with State and Props
-
-1. **Add interactivity with props**  
-   - Pass props to `Project` components to make them customizable (project name, description, link, etc.).
-
-2. **Add basic state management**  
-   - For example, use state to highlight a project on hover.
-   - **Commit**: "Add props for Project components and basic interactivity with state."
-
----
-
-## Milestone 7: Styling with CSS Modules or Styled-Components
-
-1. **Convert styles to CSS Modules or Styled-Components**  
-   - Apply CSS Modules or `styled-components` for scoped, cleaner styling.
-
-2. **Enhance styles for responsiveness**  
-   - Use media queries to make your site responsive.
-   - **Commit**: "Implement CSS Modules/styled-components for scoped styling."
-
----
-
-## Milestone 8: Adding Animations and Transitions
-
-1. **Add subtle animations**  
-   - Use CSS or `react-spring` for animations (e.g., fade-in, hover effects).
-  
-2. **Test for smooth UI**  
-   - Confirm that animations enhance the UI without slowing it down.
-   - **Commit**: "Add animations to improve the user experience."
-
----
-
-## Milestone 9: Adding a Contact Form
-
-1. **Build a ContactForm component**  
-   - Create a form with fields for name, email, and message.
-  
-2. **Handle form submissions**  
-   - (Optional) Connect to a form service like Formspree or store messages in local state.
-   - **Commit**: "Add Contact Form component with form submission handling."
-
----
-
-## Milestone 10: Final Touches and Deployment
-
-1. **Add final polishing touches**  
-   - Improve accessibility (e.g., add `aria` labels, adjust for screen readers).
-   - Do a final review of responsive design across different devices.
-
-2. **Deploy your site**  
-   - Use GitHub Pages, Vercel, or Netlify for easy deployment.
-   - **Commit**: "Add final styling and deploy site."
-
----
-
-This structure should guide you through creating a React personal website in bite-sized, incremental steps.
-
+~
+~
+ NORMAL  ᚠ main!  README.md[+]                                                                                                                                       markdown  utf-8[unix]  707 words 99% ㏑:151/152☰℅:1   ☲ [42:40]mix-indent-file
+"README.md" 154L, 6291B written
