@@ -4,7 +4,8 @@ const HomePage: React.FC = () => {
   return (
     <div>
       <header>
-        <h1>Abbas Shikari. Engineer. Scientist. Builder</h1>
+        <h1>Abbas Shikari</h1>
+          <h2>Engineer. Scientist. Builder</h2>
         <p>I've linked a series of my personal projects. Please check them out and get in touch if you're interested in working together.</p>
       </header>
       <main>
