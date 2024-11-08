@@ -40,3 +40,33 @@
 .read-the-docs {
   color: #888;
 }
+
+/* App.css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+header, footer {
+  background-color: #f8f9fa;
+  padding: 1em;
+  text-align: center;
+}
+
+main {
+  padding: 1em;
+  max-width: 800px;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+p {
+  color: #666;
+}
+
